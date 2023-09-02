@@ -1,0 +1,525 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+*{
+         
+          margin: 0;
+          padding: 0;
+          font-family: 'Poppuins',sans-serif;
+}
+ /* universal selector */
+/* Variable - post values that are going to be repeated again and again, like color code.. to ease the code reuse */
+:root{
+          --major-background-color: #131921;
+          --minor-background-color: #ebeded;
+          --amazon-major-color: #febd68;
+}
+/* body */
+body{
+          background-color: var(--minor-background-color);
+}
+/*Header*/
+.header{
+  position: fixed;
+ width: 100%;
+ height: 50px;
+ background-color: var(--major-background-color);
+display: flex;
+
+}
+/* flex - if you have diff divisions in a column manner and if you want to align iin horizontal we can use flex.. it will assign it horizontally */
+/* justify content align it in center */
+.header .header-nav{
+  margin-top: 2px;
+  display: flex;
+  justify-content: center;
+ 
+  
+  
+}
+.header .header-nav .header-container {
+          width: 1000px;
+          height: 100%;
+          display: flex;
+          
+          margin-left: 30px;
+          align-items: center;
+        
+
+}
+.header .header-nav .header-container  .amazon-logo{
+          width: 100px;
+                
+
+}
+
+
+.header .header-nav .header-container .header-search{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-left: 300px;
+         
+          
+          
+}
+.header .header-nav .header-container .header-search .search-input{
+          width: 600px;
+          height: 40px;
+          border: 1px solid #ccc;
+          padding: 0 10px;
+          font-size: 16px;
+}
+.header .header-nav .header-container .header-search .search-button{
+          width: 40px;
+          height: 42px;
+          background-color: var(--amazon-major-color);
+          border: 1px solid #ccc;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          color: #232323;
+          
+
+}
+
+
+.header .header-nav .header-container .signin{
+  font-size: 15px;
+  color: white;
+margin-left: 40px;
+font-size: 15px;
+transition-duration: .8s;
+transition: ease-in .4s;
+
+ 
+}
+.header .header-nav .header-container .signin:hover{
+  color: var(--amazon-major-color);
+}
+/* align item and align center will align the icon in a button correctly, display flex and justify content center is used to align the icon in the center inside the button  */
+.header .header-nav .header-container .header-cart {
+          color: white;
+          display: flex;
+        
+
+}
+/* style svg */
+.header .header-nav .header-container .header-cart svg{
+          width: 40px;
+          height: 40px;
+          padding-left: 240px;
+          transition-duration: .8s;
+          transition: ease-in .4s;
+      
+          
+}
+.header .header-nav .header-container .header-cart svg:hover{
+  color: var(--amazon-major-color);
+}
+
+/* section styling */
+
+.section-1{
+  width: 100%;
+  height: auto;
+  background-image: url(https://images-eu.ssl-images-amazon.com/images/G/31/img23/Fashion/GW/July/Apay/Deals-Unrec-PC-3000_2._CB598748121_.jpg);
+  display: flex;
+  background-size: cover;
+
+}
+.section-1 .section-1-container{
+  margin-top: 300px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  
+}
+/* align-items flex start is set to make the section 1 images container in same lane horizontally */
+.section-1 .section-1-container .section-1-column{
+  background-color: white;
+  width: 100%;
+  height: 311px;
+  padding: 20px;
+}
+
+
+.section-1 .section-1-container .section-1-column img{
+  margin-top: 20px;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+.section-1 .section-1-container .section-1-column p{
+  margin-top: 10px;
+  font-size: 14px;
+  color: #007185;
+}
+.section-1 .section-1-container .section-1-column button{
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  background-color: var(--amazon-major-color);
+  padding: 8px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+
+/* section 2 related items */
+.section-2{
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  
+ 
+
+}
+.section-2 .section-2-container h3{
+  margin-bottom: 10px;
+
+}
+/* container for product cards */
+.section-2 .section-2-container .product-cards{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: nowrap;
+  overflow-x:auto;
+ 
+}
+/* product card */
+.section-2 .section-2-container .product-cards .product-card{
+  display: inline-block;
+  width: 300px !important;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.section-2 .section-2-container .product-cards .product-card img{
+  width: auto;
+  height: auto;
+  max-width: 270px;
+  max-height: 200px;
+  cursor: pointer;
+}
+
+/* section 3 */
+.section-3{
+  background-color: white;
+
+}
+.section-3 .section-3-container{
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+
+}
+.section-3 .section-3-container .product-detail-cards{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+.section-3 .section-3-container .product-detail-cards .product-detail-card{
+  display: inline-block;
+  width: 200px !important;
+  flex: 0 0 auto; 
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+  
+}
+/* flex 0 0 auto will align the horizontal scroll */
+
+
+.section-3 .section-3-container .product-detail-cards .product-detail-card img {
+  width: 180px;
+
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+.section-3 .section-3-container .product-detail-cards .product-detail-card .anchor{
+color: rgb(71, 178, 186);
+transition: ease-out .4s;
+text-decoration: none;
+font-size: 14px;
+}
+.section-3 .section-3-container .product-detail-cards .product-detail-card .anchor:hover{
+  color: var(--amazon-major-color);
+}
+.section-4{
+  
+  background-color:white;
+  padding: 20px;
+  
+}
+.section-4 .section-4-container{
+ margin: 5px;
+
+ display: flex;
+ align-items: center;
+ justify-content:center;
+ flex-direction: column;
+ padding: 10px;
+}
+.section-4 .section-4-container .section-4-para{
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  margin-bottom: 6px;
+
+
+}
+.section-4 .section-4-container .section-4-btn{
+  width: 260px;
+  height: 30px;
+  border-radius: 5px;
+  border: 0;
+  background-color: var(--amazon-major-color);
+  font-weight: 700;
+margin-top: 2px;
+ cursor: pointer;
+
+ 
+}
+.section-4 .section-4-container .section-4-para1{
+  font-size: 11px;
+ margin-top: 4px;
+}
+.section-4 .section-4-container .section-4-para1 .anchor4{
+  color: #353333;
+}
+/* footer */
+.footer{
+
+font-size: 12px;
+width: 100%;
+height: 750px;
+color: black;
+background-color: #232323;
+position: relative;
+
+}
+.footer .back{
+  background-color:#37475A;
+  color: white;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+
+
+
+}
+a{
+  text-decoration: none;
+}
+
+.footer .back .backp{
+  font-size: 15px;
+
+}
+
+.footer .second-footer{
+  height: 350px;
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  gap: 150px;
+  justify-content: center;
+  
+
+  background-color: #232F3E;
+
+}
+.footer .third-footer {
+  background-color: #232F3E;
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+ 
+
+
+}
+.footer .fourth-footer{
+  background-color: #131A22;
+  width: 100%;
+  height: 300px;
+}
+hr{
+  width: 100%;
+  border: none;
+  height: .5px;
+  background-color: rgb(83, 83, 83);
+}
+.footer .second-footer .first-section-footer{
+  color: white;
+  font-size: 15px;
+  padding-top: 80px;
+ 
+ 
+}
+.footer .second-footer h6{
+  font-family: sans-serif;
+  font-weight: 20;
+  font-size: 15px;
+  padding-top: 10px;
+}
+.footer .second-footer p{
+  font-size: 20px;
+  
+}
+.footer .second-footer .second-section-footer{
+  color: white;
+  font-size: 15px;
+  padding-top: 80px;
+ 
+ 
+}
+.footer .second-footer .third-section-footer{
+  color: white;
+  font-size: 15px;
+  padding-top: 80px;
+ 
+ 
+}
+.footer .second-footer .fourth-section-footer{
+  color: white;
+  font-size: 15px;
+  padding-top: 80px;
+ 
+ 
+}
+.footer .third-footer .third{
+  display: flex;
+  flex-direction: row;
+  gap: 120px;
+
+}
+.footer .third-footer .third .third-footer-img{
+  height: 30px;
+  width: 100px;
+  display: flex;
+  padding-left: 600px;
+  padding-top: 40px;
+}
+.footer .third-footer .third .select{
+  
+  height: 40px;
+  width: 140px;
+  flex-direction: row;
+  background-color: #232F3E;
+  color: white;
+  margin-top: 30px;
+cursor: pointer;
+opacity: 0.5;
+transition: ease-out .4s;
+ 
+}
+.footer .third-footer .country{
+  display: flex;
+  align-content: center;
+  align-items: center;
+  
+padding-left: 250px;
+gap: 10px;
+
+
+}
+.footer .third-footer .country p{
+  color: white;
+  
+}
+.footer .fourth-footer .first-fourth-footer{
+  height: 100px;
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+}
+.footer .fourth-footer .first-fourth-footer .first-section-fourth{
+  width: 200px;
+  margin-left: 300px;
+  
+}
+.footer .fourth-footer .first-fourth-footer .second-section-fourth{
+  width: 200px;
+
+  
+}
+.footer .fourth-footer .first-fourth-footer .third-section-fourth{
+  width: 200px;
+
+  
+}
+.footer .fourth-footer .first-fourth-footer .fourth-section-fourth{
+  width: 200px;
+
+  
+}
+.footer .fourth-footer .first-fourth-footer .fifth-section-fourth{
+  width: 200px;
+ 
+
+  
+}
+
+.footer .fourth-footer .first-fourth-footer p{
+  font-family: sans-serif;
+  color: white;
+  font-size: 15px;
+  
+}
+.footer .fourth-footer .first-fourth-footer  h6{
+  color: rgb(159, 155, 155);
+  font-weight: 50;
+  padding-top: 3px;
+  font-size: 10px;
+
+}
+
+.footer .fourth-footer .second-fourth-footer{
+  height: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  
+}
+.footer .fourth-footer .second-fourth-footer p{
+  color: rgb(192, 185, 185);
+  
+}
+
+.footer .fourth-footer .third-fourth-footer{
+  color: rgb(206, 190, 190);
+display: flex;
+justify-content: center;
+
+
+}
+.footer .third-footer .third .select:hover{
+  opacity: 1;
+  transform: translateY(10px);
+}
