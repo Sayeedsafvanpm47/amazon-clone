@@ -5,6 +5,9 @@
           padding: 0;
           font-family: 'Poppuins',sans-serif;
 }
+p{
+  cursor: pointer;
+}
  /* universal selector */
 /* Variable - post values that are going to be repeated again and again, like color code.. to ease the code reuse */
 :root{
@@ -23,6 +26,9 @@ body{
  height: 50px;
  background-color: var(--major-background-color);
 display: flex;
+top: 0;
+left: 0;
+right: 0;
 
 }
 /* flex - if you have diff divisions in a column manner and if you want to align iin horizontal we can use flex.. it will assign it horizontally */
@@ -76,8 +82,6 @@ display: flex;
           border: 1px solid #ccc;
           display: flex;
           justify-content: center;
-          align-items: center;
-          align-content: center;
           color: #232323;
           
 
