@@ -7,6 +7,10 @@
 }
 p{
   cursor: pointer;
+  transition: ease-in-out .4s;
+}
+p:hover{
+  color: var(--amazon-major-color);
 }
  /* universal selector */
 /* Variable - post values that are going to be repeated again and again, like color code.. to ease the code reuse */
@@ -18,6 +22,7 @@ p{
 /* body */
 body{
           background-color: var(--minor-background-color);
+          
 }
 /*Header*/
 .header{
@@ -29,6 +34,7 @@ display: flex;
 top: 0;
 left: 0;
 right: 0;
+z-index: 100;
 
 }
 /* flex - if you have diff divisions in a column manner and if you want to align iin horizontal we can use flex.. it will assign it horizontally */
@@ -53,8 +59,12 @@ right: 0;
 }
 .header .header-nav .header-container  .amazon-logo{
           width: 100px;
+          transition: ease-in-out .6s;
                 
 
+}
+.header .header-nav .header-container  .amazon-logo:hover{
+  transform: scale(1.2);
 }
 
 
@@ -100,6 +110,7 @@ transition: ease-in .4s;
 }
 .header .header-nav .header-container .signin:hover{
   color: var(--amazon-major-color);
+  transform: scale(1.2);
 }
 /* align item and align center will align the icon in a button correctly, display flex and justify content center is used to align the icon in the center inside the button  */
 .header .header-nav .header-container .header-cart {
@@ -114,12 +125,13 @@ transition: ease-in .4s;
           height: 40px;
           padding-left: 240px;
           transition-duration: .8s;
-          transition: ease-in .4s;
+          transition: ease-in .2s;
       
           
 }
 .header .header-nav .header-container .header-cart svg:hover{
   color: var(--amazon-major-color);
+  transform: scale(1.1);
 }
 
 /* section styling */
@@ -131,6 +143,7 @@ transition: ease-in .4s;
   display: flex;
   background-size: cover;
 
+
 }
 .section-1 .section-1-container{
   margin-top: 300px;
@@ -138,9 +151,10 @@ transition: ease-in .4s;
   margin-left: 20px;
   margin-bottom: 20px;
 
+
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: 20px;
   
 }
@@ -173,6 +187,9 @@ transition: ease-in .4s;
   border-radius: 10px;
   cursor: pointer;
 }
+.section-1 .section-1-container .section-1-column button:hover{
+  background-color: var(--minor-background-color);
+}
 
 
 /* section 2 related items */
@@ -191,18 +208,18 @@ transition: ease-in .4s;
 /* container for product cards */
 .section-2 .section-2-container .product-cards{
   display: flex;
-  justify-content: flex-start;
+  justify-content:space-between;
   align-items: center;
   gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x:auto;
+  overflow:auto;
+  
  
 }
 /* product card */
 .section-2 .section-2-container .product-cards .product-card{
   display: inline-block;
-  width: 300px !important;
-  flex: 0 0 auto;
+  width: 300px;
+ flex: 0 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,6 +231,11 @@ transition: ease-in .4s;
   max-width: 270px;
   max-height: 200px;
   cursor: pointer;
+  transition: ease-in-out .5s;
+}
+.section-2 .section-2-container .product-cards .product-card img:hover{
+  transform: scale(0.9);
+  
 }
 
 /* section 3 */
@@ -231,20 +253,18 @@ transition: ease-in .4s;
 }
 .section-3 .section-3-container .product-detail-cards{
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   gap: 25px;
-  flex-wrap: nowrap;
   overflow: auto;
 }
 .section-3 .section-3-container .product-detail-cards .product-detail-card{
   display: inline-block;
-  width: 200px !important;
+  width: 200px;
   flex: 0 0 auto; 
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  flex-direction: column;
+
   
 }
 /* flex 0 0 auto will align the horizontal scroll */
@@ -252,7 +272,6 @@ transition: ease-in .4s;
 
 .section-3 .section-3-container .product-detail-cards .product-detail-card img {
   width: 180px;
-
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -300,8 +319,12 @@ font-size: 14px;
   font-weight: 700;
 margin-top: 2px;
  cursor: pointer;
+ transition: ease-in-out .5s;
 
  
+}
+.section-4 .section-4-container .section-4-btn:hover{
+  background-color: var(--minor-background-color);
 }
 .section-4 .section-4-container .section-4-para1{
   font-size: 11px;
@@ -319,6 +342,7 @@ height: 750px;
 color: black;
 background-color: #232323;
 position: relative;
+z-index: 200;
 
 }
 .footer .back{
@@ -329,9 +353,14 @@ position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  
  
 
 
+
+}
+ .back :hover{
+color: var(--amazon-major-color);
 
 }
 a{
@@ -339,7 +368,7 @@ a{
 }
 
 .footer .back .backp{
-  font-size: 15px;
+  font-size: 18px;
 
 }
 
@@ -347,12 +376,8 @@ a{
   height: 350px;
   width: 100%;
   display: flex;
-  position: relative;
-
   gap: 150px;
   justify-content: center;
-  
-
   background-color: #232F3E;
 
 }
@@ -525,5 +550,5 @@ justify-content: center;
 }
 .footer .third-footer .third .select:hover{
   opacity: 1;
-  transform: translateY(10px);
+  transform: translateY(3px);
 }
