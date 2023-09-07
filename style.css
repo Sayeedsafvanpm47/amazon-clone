@@ -23,7 +23,7 @@ p:hover{
 /* body */
 body{
           background-color: var(--minor-background-color);
-         
+       
         
 }
 /*Header*/
@@ -345,7 +345,7 @@ margin-top: 2px;
 
 width: 100%;
 height: 750px;
-color: black;
+
 background-color: #232323;
 position: relative;
 z-index: 200;
@@ -481,9 +481,9 @@ transition: ease-out .4s;
   align-items: center;
   position: absolute;
   white-space: nowrap;
-
+  font-size: 14px;
   bottom: 220px;
-  right: 135px;
+  right: 200px;
   
 padding-left: 250px;
 gap: 10px;
@@ -494,6 +494,9 @@ gap: 10px;
   color: white;
    
   
+}
+.footer .third-footer .country p:hover{
+  color: var(--amazon-major-color);
 }
 .footer .fourth-footer .first-fourth-footer{
   height: 100px;
