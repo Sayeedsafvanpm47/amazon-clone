@@ -9,9 +9,7 @@ p{
   cursor: pointer;
   transition: ease-in-out .4s;
 }
-p:hover{
-  color: var(--amazon-major-color);
-}
+
  /* universal selector */
 /* Variable - post values that are going to be repeated again and again, like color code.. to ease the code reuse */
 :root{
@@ -19,28 +17,33 @@ p:hover{
           --minor-background-color: #ebeded;
           --amazon-major-color: #febd68;
 }
+p:hover{
+  color: var(--amazon-major-color);
+}
 /* body */
 body{
           background-color: var(--minor-background-color);
-          
+         
+        
 }
 /*Header*/
 .header{
   position: fixed;
+  top: 0;
+left: 0;
+right: 0;
  width: 100%;
+
  height: 50px;
  background-color: var(--major-background-color);
 display: flex;
-top: 0;
-left: 0;
-right: 0;
 z-index: 100;
 
+
 }
-/* flex - if you have diff divisions in a column manner and if you want to align iin horizontal we can use flex.. it will assign it horizontally */
-/* justify content align it in center */
+
 .header .header-nav{
-  margin-top: 2px;
+  margin-top: 3px;
   display: flex;
   justify-content: center;
  
@@ -48,7 +51,7 @@ z-index: 100;
   
 }
 .header .header-nav .header-container {
-          width: 1000px;
+          width: 100%;
           height: 100%;
           display: flex;
           
@@ -92,7 +95,7 @@ z-index: 100;
           border: 1px solid #ccc;
           display: flex;
           justify-content: center;
-          color: #232323;
+          color: #2c1111;
           
 
 }
@@ -103,8 +106,8 @@ z-index: 100;
   color: white;
 margin-left: 40px;
 font-size: 15px;
-transition-duration: .8s;
-transition: ease-in .4s;
+transition-duration: .5s;
+transition: ease-in .2s;
 
  
 }
@@ -116,6 +119,9 @@ transition: ease-in .4s;
 .header .header-nav .header-container .header-cart {
           color: white;
           display: flex;
+         
+        
+
         
 
 }
@@ -124,7 +130,7 @@ transition: ease-in .4s;
           width: 40px;
           height: 40px;
           padding-left: 240px;
-          transition-duration: .8s;
+          transition-duration: .5s;
           transition: ease-in .2s;
       
           
@@ -144,19 +150,18 @@ transition: ease-in .4s;
   background-size: cover;
 
 
+
 }
 .section-1 .section-1-container{
   margin-top: 300px;
   margin-right: 20px;
   margin-left: 20px;
   margin-bottom: 20px;
-
-
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  
+  transition: .4s;
 }
 /* align-items flex start is set to make the section 1 images container in same lane horizontally */
 .section-1 .section-1-container .section-1-column{
@@ -168,7 +173,7 @@ transition: ease-in .4s;
 
 
 .section-1 .section-1-container .section-1-column img{
-  margin-top: 20px;
+  margin-top: 10px;
   width: 100%;
   height: auto;
   cursor: pointer;
@@ -190,6 +195,9 @@ transition: ease-in .4s;
 .section-1 .section-1-container .section-1-column button:hover{
   background-color: var(--minor-background-color);
 }
+.section-1 .section-1-container .section-1-column:hover{
+  transform: translateY(-10px);
+}
 
 
 /* section 2 related items */
@@ -201,6 +209,8 @@ transition: ease-in .4s;
  
 
 }
+
+
 .section-2 .section-2-container h3{
   margin-bottom: 10px;
 
@@ -210,17 +220,14 @@ transition: ease-in .4s;
   display: flex;
   justify-content:space-between;
   align-items: center;
-  gap: 20px;
+  gap: 100px;
   overflow:auto;
-  
- 
 }
 /* product card */
 .section-2 .section-2-container .product-cards .product-card{
   display: inline-block;
   width: 300px;
- flex: 0 0 auto;
-  display: flex;
+   display: flex;
   justify-content: center;
   align-items: center;
  
@@ -255,25 +262,24 @@ transition: ease-in .4s;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 25px;
+  gap: 30px;
   overflow: auto;
 }
 .section-3 .section-3-container .product-detail-cards .product-detail-card{
   display: inline-block;
   width: 200px;
-  flex: 0 0 auto; 
   justify-content: center;
   align-items: center;
 
   
 }
-/* flex 0 0 auto will align the horizontal scroll */
+
 
 
 .section-3 .section-3-container .product-detail-cards .product-detail-card img {
   width: 180px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   cursor: pointer;
 }
 .section-3 .section-3-container .product-detail-cards .product-detail-card .anchor{
@@ -298,7 +304,7 @@ font-size: 14px;
  align-items: center;
  justify-content:center;
  flex-direction: column;
- padding: 10px;
+
 }
 .section-4 .section-4-container .section-4-para{
   font-size: 15px;
@@ -336,7 +342,7 @@ margin-top: 2px;
 /* footer */
 .footer{
 
-font-size: 12px;
+
 width: 100%;
 height: 750px;
 color: black;
@@ -353,16 +359,12 @@ z-index: 200;
   display: flex;
   align-items: center;
   justify-content: center;
-  
- 
 
 
 
-}
- .back :hover{
-color: var(--amazon-major-color);
 
 }
+
 a{
   text-decoration: none;
 }
@@ -370,6 +372,10 @@ a{
 .footer .back .backp{
   font-size: 18px;
 
+}
+.footer .back .backp:hover{
+  font-size: 20px;
+ 
 }
 
 .footer .second-footer{
@@ -396,6 +402,7 @@ a{
   background-color: #131A22;
   width: 100%;
   height: 300px;
+ padding-left: 10px;
 }
 hr{
   width: 100%;
@@ -445,6 +452,7 @@ hr{
   display: flex;
   flex-direction: row;
   gap: 120px;
+  position: absolute;
 
 }
 .footer .third-footer .third .third-footer-img{
@@ -471,6 +479,11 @@ transition: ease-out .4s;
   display: flex;
   align-content: center;
   align-items: center;
+  position: absolute;
+  white-space: nowrap;
+
+  bottom: 220px;
+  right: 135px;
   
 padding-left: 250px;
 gap: 10px;
@@ -479,6 +492,7 @@ gap: 10px;
 }
 .footer .third-footer .country p{
   color: white;
+   
   
 }
 .footer .fourth-footer .first-fourth-footer{
